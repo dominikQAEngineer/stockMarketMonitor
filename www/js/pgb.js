@@ -20,3 +20,17 @@ function deviceInfo() {
 	navigator.notification.alert(info);
 	
 }
+function personalInfo() {
+
+	info =  'Hi, I am your programmer :-)'   + '\n' +
+			'====='                          + '\n' +
+			'My name is Dominik'             + '\n' +
+			'My project colleague is Ola'    + '\n' +
+			'We ain\'t know shit about mobile project'+'\n' +
+			'I hope we\'ll pass'             + '\n' +
+			'Please help'+ '\n' +
+			'This is my message *crying for help*'+'\n';
+
+	navigator.notification.message(info);
+
+}
