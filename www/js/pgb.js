@@ -31,6 +31,6 @@ function personalInfo() {
 			'Please help'+ '\n' +
 			'This is my message *crying for help*'+'\n';
 
-	navigator.notification.message(info);
+	navigator.notification.alert(info);
 
 }
