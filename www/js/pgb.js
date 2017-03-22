@@ -1,5 +1,7 @@
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
+	var options = { frequency: 1000 };  // Update every 3 seconds
+    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 }
 
 function onDeviceReady() {
@@ -64,9 +66,4 @@ function onError() {
 }
 function checkAcceleration(){
 navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
-}
-function watchAcceleration(){
-var options = { frequency: 3000 };  // Update every 3 seconds
-
-var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 }
