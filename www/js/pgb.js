@@ -1,6 +1,5 @@
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
-
 }
 
 function onDeviceReady() {
@@ -67,3 +66,17 @@ function onError() {
 function checkAcceleration(){
 navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 }
+
+
+function contactSuccess(contacts) {
+    alert('Found ' + contacts.length + ' contacts.');
+};
+
+function contactError(contactError) {
+    alert('onError!');
+};
+
+function showContacts(){
+var fields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
+navigator.contacts.find(fields, contactSuccess, contactError);
+};
