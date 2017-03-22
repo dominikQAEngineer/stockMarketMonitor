@@ -5,8 +5,6 @@ function init() {
 
 function onDeviceReady() {
 	navigator.notification.beep(1);
-	var options = { frequency: 1000 };  // Update every 3 seconds
-        var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 }
 
 function deviceInfo() {
@@ -59,6 +57,8 @@ function onSuccess(acceleration) {
           'Acceleration Y: ' + acceleration.y + '\n' +
           'Acceleration Z: ' + acceleration.z + '\n' +
           'Timestamp: '      + acceleration.timestamp + '\n');
+
+
 }
 
 function onError() {
