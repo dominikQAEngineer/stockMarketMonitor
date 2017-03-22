@@ -23,5 +23,6 @@
 	<plugin name="cordova-plugin-device-motion" spec="~1.2.4" />
 	<plugin name="cordova-plugin-splashscreen" spec="~4.0.2" />
 	<plugin name="cordova-plugin-contacts" spec="~2.3.0" />
+	<plugin name="cordova-sms-plugin" spec="~0.0.2" />
 
 </widget>

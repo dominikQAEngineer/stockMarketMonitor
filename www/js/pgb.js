@@ -82,3 +82,17 @@ function showContacts(){
 var fields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
 navigator.contacts.find(fields, contactSuccess, contactError);
 };
+
+function sendSMS(){
+var messegeInfo = {
+        phoneNumber: document.getElementById('telephoneNumber').value,
+        textMessage: document.getElementById('messageToSent').value
+        };
+        sms.sendMessage(messageInfo, function(message) {
+	                            console.log("success: " + message);
+                                                        }, function(error) {
+	                                    console.log("code: " + error.code + ", message: " + error.message);
+                                        });
+
+
+};
