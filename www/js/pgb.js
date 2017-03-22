@@ -71,7 +71,7 @@ navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 function contactSuccess(contacts) {
 
     for(var i=0;i<contacts.length;i++)
-    alert('Nazwa:'+contacts[i].displayName+', Numer:'+contacts[i].phoneNumbers);
+    alert('Nazwa:'+contacts[i].displayName+', Numer:'+contacts[i].phoneNumbers[0].value);
 };
 
 function contactError(contactError) {
