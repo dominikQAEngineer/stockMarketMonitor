@@ -69,7 +69,11 @@ navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
 
 function contactSuccess(contacts) {
-    alert('Found ' + contacts.length + ' contacts.');
+
+    for(var i=0;i<contacts.length;i++)
+    info = 'Nazwa:'+contacts[i].name+', Numer:'+'\n';
+
+    alert(info);
 };
 
 function contactError(contactError) {
