@@ -1,12 +1,12 @@
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
-	var options = { frequency: 1000 };  // Update every 3 seconds
-    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+
 }
 
 function onDeviceReady() {
 	navigator.notification.beep(1);
-	console.log(navigator.accelerometer);
+	var options = { frequency: 1000 };  // Update every 3 seconds
+        var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 }
 
 function deviceInfo() {
