@@ -23,8 +23,8 @@
 		<input type="button" onclick="checkConnection()" value="Connection information">
 		<input type="button" onclick="checkAcceleration()" value="Acceleration information">
 		<input type="button" onclick="showContacts()" value="Pokaz kontakty">
-		<input type="text" id="telephoneNumber">
-		<input type="text" id="messageToSent">
-		<input type="button" onclick="sendSMS()" value="Wyslij Sms">
+		<input id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />
+		<textarea id="messageTxt" placeholder="Enter message"></textarea>
+		<input type="button" onclick="app.sendSms()" value="Send SMS" />
 	</body>
 </html>

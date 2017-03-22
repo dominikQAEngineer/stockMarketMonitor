@@ -83,16 +83,23 @@ var fields = [navigator.contacts.fieldType.displayName, navigator.contacts.field
 navigator.contacts.find(fields, contactSuccess, contactError);
 };
 
-function sendSMS(){
-var messegeInfo = {
-        phoneNumber: document.getElementById('telephoneNumber').value,
-        textMessage: document.getElementById('messageToSent').value
+var app = {
+    sendSms: function() {
+        var number = document.getElementById('numberTxt').value;
+        var message = document.getElementById('messageTxt').value;
+        console.log("number=" + number + ", message= " + message);
+
+        //CONFIGURATION
+        var options = {
+            replaceLineBreaks: false, // true to replace \n by a new line, false by default
+            android: {
+                intent: 'INTENT'  // send SMS with the native android SMS messaging
+                //intent: '' // send SMS without open any other app
+            }
         };
-        sms.sendMessage(messageInfo, function(message) {
-	                            console.log("success: " + message);
-                                                        }, function(error) {
-	                                    console.log("code: " + error.code + ", message: " + error.message);
-                                        });
 
-
+        var success = function () { alert('Message sent successfully'); };
+        var error = function (e) { alert('Message Failed:' + e); };
+        sms.send(number, message, options, success, error);
+    }
 };
