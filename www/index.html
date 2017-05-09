@@ -4,7 +4,9 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<script src="js/pgb.js"></script>
 		<script src="cordova.js"></script>
-		<!--<link rel="stylesheet" type="text/css" href="css/cardStyle.css">-->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	</head>
 	<!--<body>-->
 	<!--<div class="card">-->
@@ -16,15 +18,55 @@
 	<!--</div>-->
 	<!--</body>-->
 	<body onload="init()">
-		<h1>Hello World!</h1>
-		<p id="dp"></p>
-		<input type="button" onclick="deviceInfo()" value="Let me introduce myself!">
-	    <input type="button" onclick="personalInfo()" value="My personal information">
-		<input type="button" onclick="checkConnection()" value="Connection information">
-		<input type="button" onclick="checkAcceleration()" value="Acceleration information">
-		<input type="button" onclick="showContacts()" value="Pokaz kontakty">
-		<input id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />
-		<textarea id="messageTxt" placeholder="Enter message"></textarea>
-		<input type="button" onclick="app.sendSms()" value="Send SMS" />
+		<!--<h1>Hello World!</h1>-->
+		<!--<p id="dp"></p>-->
+		<!--<input type="button" onclick="deviceInfo()" value="Let me introduce myself!">-->
+	    <!--<input type="button" onclick="personalInfo()" value="My personal information">-->
+		<!--<input type="button" onclick="checkConnection()" value="Connection information">-->
+		<!--<input type="button" onclick="checkAcceleration()" value="Acceleration information">-->
+		<!--<input type="button" onclick="showContacts()" value="Pokaz kontakty">-->
+		<!--<input id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />-->
+		<!--<textarea id="messageTxt" placeholder="Enter message"></textarea>-->
+		<!--<input type="button" onclick="app.sendSms()" value="Send SMS" />-->
+	<div data-role="page" id="mainPage">
+		<div data-role="header">
+			<h1>Main Page</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<p>MainPageContent</p>
+			<a href ="#otherPage1" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" data-icon="back"></a>
+			<a href ="#otherPage2" class="ui-btn">Go to otherPage2</a>
+		</div>
+		<div data-role="footer">
+			<h1>Footer</h1>
+		</div>
+	</div>
+	<div data-role="page" id="otherPage1">
+		<div data-role="header">
+			<h1>Other Page 1</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<p>Other Page 1 Content</p>
+			<a href ="#mainPage" class="ui-btn">Go to mainPage</a>
+			<a href ="#otherPage2" class="ui-btn">Go to otherPage2</a>
+		</div>
+		<div data-role="footer">
+			<h1>Footer</h1>
+		</div>
+	</div>
+	<div data-role="page" id="otherPage2">
+		<div data-role="header">
+			<h1>Other Page 2</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<p>OtherPage2Content</p>
+			<a href ="#mainPage" class="ui-btn">Go to mainPage</a>
+			<a href ="#otherPage1" class="ui-btn">Go to otherPage1</a>
+		</div>
+		<div data-role="footer">
+			<h1>Footer</h1>
+		</div>
+	</div>
 	</body>
+
 </html>
