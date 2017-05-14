@@ -8,15 +8,6 @@
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	</head>
-	<!--<body>-->
-	<!--<div class="card">-->
-		<!--<img src="img/zdjecieApp.png" alt="Avatar" style="width:100%">-->
-		<!--<div class="container">-->
-			<!--<h4><b>Dominik Platos</b></h4>-->
-			<!--<p>Engineer</p>-->
-		<!--</div>-->
-	<!--</div>-->
-	<!--</body>-->
 	<body onload="init()">
 		<!--<h1>Hello World!</h1>-->
 		<!--<p id="dp"></p>-->
@@ -34,8 +25,26 @@
 		</div>
 		<div data-role="main" class="ui-content">
 			<p>MainPageContent</p>
-			<a href ="#otherPage1" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" data-icon="back"></a>
+			<!--<a href ="#otherPage1" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" data-icon="back"></a>-->
+			<a href ="#otherPage1" class="ui-btn" data-icon="back">Go to otherPage1</a>
+			<!--<a href="#" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>-->
 			<a href ="#otherPage2" class="ui-btn">Go to otherPage2</a>
+			<label for="text-basic">To:</label>
+			<input type="text" name="text-basic" id="text-basic" value="">
+			<label for="date">Date:</label>
+			<input type="date" name="date" id="date" value="">
+			<label for="select-choice-a" class="select">Product:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+				    <option>Our products</option>
+				    <option value="Vodka">Vodka</option>
+				    <option value="Whiskey">Whiskey</option>
+				    <option value="Rum">Rum</option>
+				    <option value="Beer">Beer</option>
+			</select>
+			<label for="number-pattern">Quantity:</label>
+			<input type="number" name="number" pattern="[0-9]*" id="number-pattern" value="">
+			<a href="#" class="ui-btn ui-btn-inline">Approve</a>
+			<button class="ui-btn ui-btn-inline">Reject</button>
 		</div>
 		<div data-role="footer">
 			<h1>Footer</h1>
