@@ -1,6 +1,4 @@
 function start(){
-//    getData();
-//    document.getElementById('link1').click();
 var url = "http://mybank.pl/gielda/indeks-wig20.html";
     $.ajax({
             type: "GET",
@@ -9,7 +7,7 @@ var url = "http://mybank.pl/gielda/indeks-wig20.html";
 //            jsonpCallback: 'callback',
             success: function (data) {
             $("#status").val(JSON.stringify(data));
-            data=$(data).find('td .ta1 tl')
+            data=$(data).find('.g_tab:nth-child(1) tr:nth-child(3) td b:nth-child(1)').text()
               console.log(data)
               console.log(typeof data)
               alert(data);
@@ -19,7 +17,6 @@ var url = "http://mybank.pl/gielda/indeks-wig20.html";
                     $("#status").val("Unavailable: " + textStatus);
                 }
           });
-//var ref = cordova.InAppBrowser.open('https://www.investing.com/indices/');
 }
 function getData() {
 var url = "http://query.yahooapis.com/v1/public/yql";
