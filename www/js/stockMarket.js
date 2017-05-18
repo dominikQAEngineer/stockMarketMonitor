@@ -7,7 +7,8 @@ var url = "http://mybank.pl/gielda/indeks-wig20.html";
 //            jsonpCallback: 'callback',
             success: function (data) {
             $("#status").val(JSON.stringify(data));
-            data=$(data).find('.g_tab:nth-child(1) tr:nth-child(3) td b:nth-child(1)').text()
+//            data=$(data).find('.g_tab:nth-child(1) tr:nth-child(3) td b:nth-child(1)').text()
+            data=$(data).find('b[style="font-size:15px"]').text()
               console.log(data)
               console.log(typeof data)
               alert(data);
